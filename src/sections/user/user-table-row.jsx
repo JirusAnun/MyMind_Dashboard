@@ -52,14 +52,14 @@ export default function UserTableRow({
           </Stack>
         </TableCell>
 
-        <TableCell>{company}</TableCell>
+        <TableCell >{company}</TableCell>
 
-        <TableCell>{role}</TableCell>
+        <TableCell >{role}</TableCell>
 
-        <TableCell align="center">{isVerified ? 'Yes' : 'No'}</TableCell>
+        <TableCell >{isVerified}</TableCell>
 
         <TableCell>
-          <Label color={(status === 'banned' && 'error') || 'success'}>{status}</Label>
+          <Label color={(status === 'Extreme Severe' && 'error') || 'success'}>{status}</Label>
         </TableCell>
 
         <TableCell align="right">

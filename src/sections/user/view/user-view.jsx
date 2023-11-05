@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Table from '@mui/material/Table';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import TableBody from '@mui/material/TableBody';
 import Typography from '@mui/material/Typography';
@@ -12,7 +11,6 @@ import TablePagination from '@mui/material/TablePagination';
 
 import { users } from 'src/_mock/user';
 
-import Iconify from 'src/components/iconify';
 import Scrollbar from 'src/components/scrollbar';
 
 import TableNoData from '../table-no-data';
@@ -97,11 +95,8 @@ export default function UserPage() {
   return (
     <Container>
       <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-        <Typography variant="h4">Users</Typography>
+        <Typography variant="h4">Paient</Typography>
 
-        <Button variant="contained" color="inherit" startIcon={<Iconify icon="eva:plus-fill" />}>
-          New User
-        </Button>
       </Stack>
 
       <Card>
@@ -123,11 +118,10 @@ export default function UserPage() {
                 onSelectAllClick={handleSelectAllClick}
                 headLabel={[
                   { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
-                  { id: 'role', label: 'Role' },
-                  { id: 'isVerified', label: 'Verified', align: 'center' },
-                  { id: 'status', label: 'Status' },
-                  { id: '' },
+                  { id: 'phone', label: 'Phone number' },
+                  { id: 'depressScore', label: 'Depress score' },
+                  { id: 'suicideScore', label: 'Suicide score', align: 'center' },
+                  { id: 'level', label: 'Depress level' },
                 ]}
               />
               <TableBody>
@@ -139,7 +133,7 @@ export default function UserPage() {
                       name={row.name}
                       role={row.role}
                       status={row.status}
-                      company={row.company}
+                      company={row.phone}
                       avatarUrl={row.avatarUrl}
                       isVerified={row.isVerified}
                       selected={selected.indexOf(row.name) !== -1}
